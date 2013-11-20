@@ -5,5 +5,5 @@ published: false
 
 test
 
-![flower](/media/315.jpg)
 
+![](//IMG_0587.jpg)
