@@ -2,7 +2,7 @@ name: Takoma Park NatureLab
 pygments: true
 
 prose:
-  media: '/media'
+  media: 'media'
   metadata:
     _posts:
       - name: "layout"
