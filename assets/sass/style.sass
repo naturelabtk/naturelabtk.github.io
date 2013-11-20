@@ -1,0 +1,88 @@
+
+// standards
+//	#p_xx individual page
+//	.s_xx section (site structure)
+//	.g_xx group (shared characteristics across sections)
+//	.t_xx page type (section home, detail)
+
+// bring in opening part of html5 boilerplate
+@import "_html5boilerplate-start.scss"
+
+// additional resets
+dt, dd
+	margin: 0
+	padding: 0
+
+// utilities
+@import 'bourbon'
+
+// script support CSS -----------------------
+
+// symbolset
+// @import '../fonts/ss-social.css'
+// @import '../fonts/ss-standard.css'
+
+// import setup files
+@import "_config.sass"
+@import "_typography.sass"
+
+// we are using a more intuitive box model
+// see http://paulirish.com/2012/box-sizing-border-box-ftw
+*
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+
+// uncomment this rule to put a transparent background behind elements
+div, article
+//	background: $indicator
+
+
+// resusable components --------------------------
+
+// make it possible to set elts to full height of window
+body,
+html
+	height: 100%
+
+
+// layout ------------------------------------------------------------
+
+#top
+	height: 0
+	width: 0
+	margin: 0
+	padding: 0
+	position: absolute
+	top: 0
+	left: 0
+	overflow: hidden
+
+#skip
+	position: absolute
+	left: -9000px
+
+
+
+
+
+
+
+
+
+
+
+
+// END layout --------------------------------------------------------
+
+
+// import sub files
+@import "_nav.sass"
+@import "_inside.sass"
+
+// bring in closing html5 boilerplate
+@import "_html5boilerplate-end.scss"
+
+// print styles
+@import "_print.sass"
+

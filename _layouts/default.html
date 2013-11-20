@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+
+	<title>{{ page.title }}</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css" />
+	<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body id="p_front" class="s_front">
+	
+	<a name="top" id="top"></a>
+
+	<div id="skip">
+		<h1>{{ site.name }}</h1>
+		<a href="#container">skip to content</a>
+	</div>
+
+	<div id="global">
+		<ul class="global_nav">
+			<li><a class="link_home" href="/">Home</a></li>
+			<li><a class="link_work" href="/work">Work</a></li>
+			<li><a class="link_teaching" href="/teaching">Teaching</a></li>
+			<li><a class="link_blog" href="/blog">Blog</a></li>
+		</ul>	
+	</div>
+
+	<div id="container">
+
+
+		{{ content }}
+		
+
+	</div>
+	
+	<div id="footer">
+	</div>
+	
+
+	<!-- jQuery library for JavaScript -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+	<!-- sitewide scripts -->
+	<script src="/assets/js/main.min.js"></script>
+
+</body>
+</html>

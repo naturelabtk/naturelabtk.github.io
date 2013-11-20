@@ -1,0 +1,218 @@
+// =====================================================
+// typographic styles, largely reusable
+// =====================================================
+
+
+
+
+// -----------------------------------------------------
+// defaults
+
+body
+	font-family: $fontFamilySerif
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textColor
+
+// -----------------------------------------------------
+// links
+
+a
+	color: $textColor
+	text-decoration: none
+	padding: 0px 4px 1px 4px
+	padding-bottom: 0
+	background: $linkColor
+	border-radius: 3px
+	-moz-transition: all 0.5s ease-in
+	-webkit-transition: all 0.5s ease-in
+	transition: all 0.5s ease-in
+a:visited
+	background: $linkColorVisited
+	border-color: $linkColorVisited
+	color: $textColor
+@mixin hoverTransition
+	-moz-transition: all 0.2s ease-in
+	-webkit-transition: all 0.2s ease-in
+	transition: all 0.2s ease-in
+@mixin hover
+	color: $textColor
+	background: $linkColorActive
+	+hoverTransition
+a:hover
+	+hover
+@mixin noborder
+	background: none
+	border: none
+	color: inherit
+a.noborder
+	+noborder
+a img
+	+noborder
+	
+// -----------------------------------------------------
+// headers
+
+@for $i from 1 through 6
+	h#{$i}
+		margin-top: 1em
+		margin-bottom: 0.25em
+		font-weight: normal
+		color: $textColor
+
+// page title and related subhead and breadcrumb navigation
+h1
+	font-family: $fontFamilySerif
+	font-size: 2.25em
+	line-height: 1em
+	margin: 0
+	padding: 0
+	
+h2
+	font-size: 1.55em
+	line-height: 1.25em
+	font-family: $fontFamilySerif
+	padding-top: 25px
+	margin: 3em 0 1em 0
+	clear: both
+	
+h3
+	margin: 2em 0 1em 0
+	font-size: 1.0em
+	line-height: 1.4em
+	font-family: $fontFamilySans
+	font-weight: 600
+
+h4
+	margin: 3em 0 1em 0em
+	line-height: 0.9em
+	font-family: $fontFamilySans
+	font-weight: 600
+	font-size: 0.75em
+	letter-spacing: 0.1em
+	text-transform: uppercase
+	
+h5
+	font-size: 0.8em
+	line-height: 1em
+	font-family: $fontFamilySans
+	font-weight: 400
+	text-transform: uppercase
+	letter-spacing: 0.2em
+
+@for $i from 2 through 6
+	h#{$i}:first-child
+		margin-top: 0
+
+@for $i from 1 through 6
+	h#{$i} a, h#{$i} a:visited
+		+noborder
+	h#{$i} a:hover
+		+hover
+
+.contrast
+	font-size: 1.25em
+	line-height: 1em
+	font-family: $fontFamilySans
+	font-weight: 600
+
+p.subhead a, p.subhead a:visited
+	+noborder
+p.subhead a:hover
+	+hover
+
+		
+// -----------------------------------------------------
+// body text
+
+p
+	margin: 0 0 0.75em 0
+	text-indent: 0
+h2 + p
+	margin-top: 0
+		
+blockquote
+	clear: both
+	margin: 1.5em 2em 1.5em 2em
+	padding: 0 1.5em 0 1em
+
+pre	
+	clear: both
+	margin: 1.5em 2em 1.5em 2em
+	padding: 0.75em 1.5em 1em 1em
+	font-size: 1em
+	line-height: 1em
+	font-family: $fontFamilyMonospace
+	
+code
+	padding: 0.2em
+	font-size: 0.85em
+	font-family: $fontFamilyMonospace
+	
+pre > code
+	margin: 0
+	padding: 0
+	border: none
+	
+em,
+cite
+	font-style: italic
+
+strong
+	font-weight: bold
+
+i,
+b
+	font-weight: normal
+	font-style: normal
+	
+hr
+	clear: both
+	margin: 1em 0 2em 0
+	border: 1px solid #eee
+
+// -----------------------------------------------------
+// lists
+
+ul
+	margin: 0.25em 0 0.5em 0
+	padding: 0 0 0 1em
+	li
+		padding-left: 13px
+	ul
+		margin: 0 0 0.25em 0.25em
+
+
+// detail typography --------------------------------------------------
+
+@mixin smaller
+	font-size: 0.85em !important
+	line-height: 1.5em
+
+small
+	+smaller
+	
+.intro
+	font-size: 1.25em
+	line-height: 1.5em
+	
+@mixin sc
+	font-size: 0.8em
+	letter-spacing: 0.1em
+	text-transform: uppercase
+.sc
+	+sc
+		
+// symbolset
+.ss-icon
+	font-size: 0.9em
+	position: relative
+	top: 3px
+
+.subdued
+	color: lighten($textColor, 50%)
+	
+// hidden text alternatives for screen readers
+.plaintext
+	display: none
+
