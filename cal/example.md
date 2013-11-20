@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: cal
 title: Basic Markdown Thing
 ---
 

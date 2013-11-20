@@ -23,11 +23,11 @@ prose:
               value: "pears"
             - name: "Mangos"
               value: "mangos"
-    classes:
+    cal:
       - name: "layout"
         field:
           element: "hidden"
-          value: "class"
+          value: "cal"
       - name: "tags"
         field:
           element: "multiselect"
