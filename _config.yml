@@ -1,10 +1,14 @@
-name: Your New Jekyll Site
+name: Takoma Park NatureLab
 pygments: true
 
 prose:
   media: 'media'
   metadata:
     _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
       - name: "tags"
         field:
           element: "multiselect"
